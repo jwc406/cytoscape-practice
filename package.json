@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev:frontend": "npm --prefix ./frontend run dev",
+    "dev:server": "npm --prefix ./server run dev",
+    "dev:all": "run-p dev:server dev:frontend"
   },
   "dependencies": {
     "cytoscape": "^3.33.0",
@@ -27,6 +26,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.90.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
